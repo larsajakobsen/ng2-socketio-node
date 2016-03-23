@@ -34,7 +34,7 @@ export class SocketService {
         
     }
     
-    event1():Observable<number> {
+    event1():Observable<string> {
         return Observable.create((o) => {
             this._socket.on('event', (data) => {
                 o.next(data.id);
@@ -42,7 +42,7 @@ export class SocketService {
         })
     }
     
-    event2():Observable<number> {
+    event2():Observable<string> {
         return Observable.create((o) => {
             this._socket.on('event2', (data) => {
                 o.next(data.id);
@@ -50,7 +50,7 @@ export class SocketService {
         })
     }
     
-    event3():Observable<number> {
+    event3():Observable<string> {
         return Observable.create((o) => {
             this._socket.on('event3', (data) => {
                 o.next(data.id);

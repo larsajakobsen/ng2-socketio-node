@@ -1,4 +1,25 @@
-.box{
+
+.blue{
+    background-color: blue;
     width: 30vw;
-    height: 30vw;
+    min-height: 30vw;
+    float: left;
+}
+
+.red{
+    background-color: red;
+    width: 30vw;
+    min-height: 30vw;
+    float: left;
+}
+
+.yellow{
+    background-color: yellow;
+    width: 30vw;
+    min-height: 30vw;
+    float: left;
+}
+
+footer{
+    clear: both;
 }

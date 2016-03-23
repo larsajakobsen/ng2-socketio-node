@@ -9,11 +9,11 @@ import {SocketService} from '../services/socket.service';
 
 export class Blue {
     
-    values: number[] = [];
+  color: string
 
     constructor(public _socketService: SocketService) {
         _socketService.event1().subscribe((data) => {
-            this.values.push(data);
+            this.color = data;
         })
     }
 

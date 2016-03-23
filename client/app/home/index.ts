@@ -13,7 +13,7 @@ import {Yellow} from './yellow';
         Yellow
     ],
     template: `
-    <div
+    <div>
         <blue class="box"></blue>
         <red class="box"></red>
         <yellow class="box"></yellow>
