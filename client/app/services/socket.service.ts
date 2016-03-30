@@ -34,27 +34,42 @@ export class SocketService {
         
     }
     
-    event1():Observable<string> {
+    drum():Observable<string> {
         return Observable.create((o) => {
-            this._socket.on('event', (data) => {
-                o.next(data.id);
+            this._socket.on('drum', (data) => {
+                o.next(data.color);
             });
         })
     }
     
-    event2():Observable<string> {
+    hihat():Observable<string> {
         return Observable.create((o) => {
-            this._socket.on('event2', (data) => {
-                o.next(data.id);
+            this._socket.on('hihat', (data) => {
+                o.next(data.color);
             });
         })
     }
     
-    event3():Observable<string> {
+    handleNote(eventName: string):Observable<Note> {
         return Observable.create((o) => {
-            this._socket.on('event3', (data) => {
-                o.next(data.id);
+            this._socket.on(eventName, (data) => {
+                console.log('handle ' + eventName + 'event');
+                o.next(new Note(data.color, data.soundUri));
             });
         })
+    }
+    
+    noteClick(soundUri: string){
+        console.log('send event click');
+        this._socket.emit('note-click', { soundUri: soundUri })
+    }
+}
+
+export class Note{
+    color: string
+    soundUri: string
+    constructor(color: string, soundUri: string){
+        this.color = color;
+        this.soundUri = soundUri;
     }
 }
