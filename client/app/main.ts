@@ -4,7 +4,6 @@ import {bootstrap} from 'angular2/platform/browser';
 import {ROUTER_PROVIDERS, LocationStrategy, PathLocationStrategy} from 'angular2/router';
 import {HTTP_PROVIDERS} from 'angular2/http';
 import {SocketService} from './services/socket.service';
-import {Drum} from './home/drum';
 
 /*
  * App Component
@@ -18,7 +17,6 @@ import {App} from './app';
  */
 document.addEventListener('DOMContentLoaded', function main() {
   bootstrap(App, [
-    Drum,
     SocketService,
     ...HTTP_PROVIDERS,
     ...ROUTER_PROVIDERS,

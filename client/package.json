@@ -1,11 +1,11 @@
 {
-  "name": "ng2-brunch",
-  "description": "Brunch with Angular 2",
-  "author": "Colin Bate <colin@colinbate.com>",
+  "name": "ng2-socketio-node",
+  "description": "Angular 2 with Socket.io",
+  "author": "Lars Jakobsen <laj@novanet.no>",
   "version": "0.3.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/colinbate/ng2-brunch"
+    "url": "https://github.com/larsajakobsen/ng2-socketio-node"
   },
   "scripts": {
     "start": "brunch watch --server",

@@ -10,16 +10,7 @@ declare var io: any;
 export class SocketService {
 
     private _socket = io('http://localhost:3001');
-  
-    public values$: Observable<number[]>;
-    private _valuesObserver: Observer<number[]>;
-    
-    public values: number[] = [];
-    
-    private _dataStore: {
-        values: number[];
-    };
-    
+      
     constructor() {
                      
         console.log("SocketService started");
