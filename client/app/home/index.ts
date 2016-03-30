@@ -14,11 +14,11 @@ import {Note} from './note';
     ],
     template: `
     <div>
-        <drum class="box"></drum>
-        <hihat class="box"></hihat>
-        <note class="box" soundUri="./sounds/c1.wav"></note>
-        <note class="box" soundUri="./sounds/clap.wav"></note>
-        <note class="box" soundUri="./sounds/cowbell.wav"></note>
+        <drum></drum>
+        <hihat></hihat>
+        <note soundUri="./sounds/c1.wav"></note>
+        <note soundUri="./sounds/clap.wav"></note>
+        <note soundUri="./sounds/cowbell.wav"></note>
     </div>`
 })
 export default class Home {

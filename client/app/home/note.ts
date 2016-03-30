@@ -24,7 +24,7 @@ export class Note implements OnInit {
         this.audio.src = this.soundUri;
         this.audio.load();
         
-        this._socketService.handleNote(this.soundUri).subscribe((data) => {
+        this._socketService.handleNote(this.soundUri).subscribe((data : Note) => {
             this.color = data.color;
             this.soundUri = data.soundUri;
             this.audio.play();
